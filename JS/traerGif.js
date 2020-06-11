@@ -20,7 +20,7 @@ sugeridos.forEach(element => {
         titleAjustado += arrayTitle[i] + " ";
       }
     }
-
+//boton eliminar en los gif sugeridos
     resultados1HTML = `<div class="sugerencias">
     <div class="titulo-sugerencias">
       <h3 class="title">#${titleAjustado.trim()}</h3>
