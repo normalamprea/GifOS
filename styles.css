@@ -1,0 +1,198 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  background: #FFF4FD;
+  transition: .3s ease all;
+  margin-left: 100px;
+  margin-right: 100px; }
+  body.dark {
+    background: #110038 100%; }
+
+#encabezado {
+  width: 100%;
+  height: 23px;
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  box-shadow: 0 1px 0 0 #110038;
+  font-family: ChakraPetch-Regular sans-serif;
+  font-size: 12px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  line-height: 16px;
+  padding-top: 4px;
+  padding-left: 8px;
+  opacity: 100%; }
+
+button {
+  background: #F7C9F3;
+  padding: 5px;
+  width: 144px;
+  height: 36px;
+  margin: 10px;
+  shape-outside: #110038 1px;
+  align-items: right;
+  cursor: pointer;
+  top: 0;
+  left: 0; }
+  body.dark button {
+    background: #EE3EFE; }
+    body.dark button a {
+      color: #FFF4FD; }
+      body.dark button a:hover {
+        color: #4180F6; }
+
+.opciones a {
+  text-decoration: none;
+  font-family: ChakraPetch-Regular;
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  line-height: 22px;
+  display: block;
+  padding: 13px; }
+
+.opciones {
+  background: #E6E6E6;
+  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+  width: 144px;
+  height: 4.7%;
+  display: none; }
+
+.opciones a:hover {
+  background: #FFF4FD;
+  border: 1px solid #CCA6C9;
+  box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF; }
+
+.desplegable:hover .opciones {
+  display: block; }
+
+#input-search {
+  width: 73.4%;
+  font-size: 16px;
+  text-indent: 10px;
+  background: #FFFFFF;
+  border: 1px solid #979797;
+  box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000; }
+
+.content-search {
+  width: 10%;
+  height: 100vh;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%); }
+
+.content-table {
+  background: #E6E6E6;
+  width: 80%;
+  max-height: 200px;
+  height: auto;
+  background: #CCA6C9;
+  margin-left: 10px;
+  overflow-y: visible;
+  overflow-x: hidden; }
+
+.content-table listaBusqueda {
+  width: 100%; }
+
+tbody tr td a {
+  display: block;
+  padding: 10px;
+  color: #110038;
+  text-decoration: none; }
+
+tbody tr td a:hover {
+  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF; }
+
+.contenedor1 {
+  margin: 20px 0; }
+  .contenedor1 .logo-container {
+    float: left; }
+  .contenedor1 .header-items-container {
+    float: right; }
+    .contenedor1 .header-items-container .box {
+      float: right; }
+
+#contBuscar {
+  background: #E6E6E6;
+  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+  margin: 3.9% 0; }
+
+#buscar {
+  width: 100%;
+  height: 23px;
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  box-shadow: 0 1px 0 0 #110038;
+  font-family: ChakraPetch-Regular sans-serif;
+  font-size: 12px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  line-height: 16px;
+  padding-top: 4px;
+  padding-left: 8px;
+  opacity: 100%; }
+
+.search-container {
+  clear: both; }
+
+#sugerencia {
+  background: #FFFAFE;
+  border: 1px solid #E6BBE2;
+  box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+  font-family: ChakraPetch-Regular;
+  font-size: 14px;
+  color: #110038;
+  letter-spacing: 0; }
+
+#tendencia {
+  background: #FFFAFE;
+  border: 1px solid #E6BBE2;
+  box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+  font-family: ChakraPetch-Regular;
+  font-size: 14px;
+  color: #110038;
+  letter-spacing: 0; }
+
+.flex-container {
+  padding: 0;
+  margin: 1.1% 0;
+  list-style: none;
+  border: 1px solid silver;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.flex-item {
+  background: #E6E6E6;
+  padding: 2px;
+  width: 24%;
+  height: 296px;
+  margin-bottom: 10px;
+  position: relative;
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center; }
+  .flex-item img {
+    height: 100%;
+    width: 100%; }
+  .flex-item .btnVerMas {
+    background: #4180F6;
+    width: 81px;
+    height: 34px;
+    font-size: 14px;
+    color: #FFFFFF;
+    position: absolute;
+    left: 160px;
+    top: 200px; }
+
+/*# sourceMappingURL=styles.css.map */

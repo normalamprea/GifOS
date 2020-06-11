@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Gifs</title>
+  <link rel="stylesheet" href="" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <div id="encabezado">
+      <h1>
+        ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número
+        de visitas: 12.765.803
+      </h1>
+    </div>
+    <div class="menu">
+      <img id="imgLogo" class="logo-container" src="./images/gifOF_logo.png" alt="Logo de gifOF" />
+      <nav class="pantallas">
+        <a href="./crear_gif.html">Crear Guifos</a>
+        <div class="desplegable box" id="tema">
+          <button class="btnElegir">
+            <span class="tema">Elegir Tema</span>
+            <span class="icono"><img id="triangulo" src="./Images/dropdown.svg" alt="Flecha"></span>
+          </button>
+          <div class="opciones" id="myDropdown">
+            <button id="themeDay" class="boton theme day"> <u>S</u>ailor Day</button>
+            <button id="themeNight" class="boton theme night">Sailor Night</button>
+          </div>
+        </div>
+        <a id="text" href="misGuifos.html"><u>M</u>is Guifos</a>
+      </nav>
+    </div>
+  </header>
+  <section id="seccion-mis-guifos" class="seccion-de-guifos">
+    <div class="titulo">
+      <h2 id="misGuifos">Mis Guifos</h2>
+    </div>
+    <div id="mis-gifs" class="cont_misgifs">
+      <!-- Aqui van los gifs guardados -->
+    </div>
+  </section>
+
+  <script src="./JS/themes.js"></script>
+  <script src="./JS/misGuifos.js"></script>
+</body>
+
+</html>

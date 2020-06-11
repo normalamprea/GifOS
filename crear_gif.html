@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Gif</title>
+  <link rel="stylesheet" href="" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <header>
+    <div id="encabezado">
+      <h1>
+        ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número
+        de visitas: 12.765.803
+      </h1>
+    </div>
+    <div class="menu">
+      <img id="imgLogo" class="logo-container" src="./images/gifOF_logo.png" alt="Logo de gifOF" />
+      <nav class="pantallas">
+        <a href="./crear_gif.html">Crear Guifos</a>
+        <div class="desplegable box" id="tema">
+          <button class="btnElegir">
+            <span class="tema">Elegir Tema</span>
+            <span class="icono"><img id="triangulo" src="./Images/dropdown.svg" alt="Flecha"></span>
+          </button>
+          <div class="opciones" id="myDropdown">
+            <button id="themeDay" class="boton theme day"> <u>S</u>ailor Day</button>
+            <button id="themeNight" class="boton theme night">Sailor Night</button>
+          </div>
+        </div>
+  </header>
+
+
+<section class="captura1">
+  <div id="crearGif">
+    <h2>Crear Guifos</h2>
+    <div class="captura-titulo">
+      <img src="./Images/window_img.png" alt="Imagen de una ventana de window">
+      <h2>Aquí podrás crear tus propios guifos</h2>
+    </div>
+    
+    <div class="instructions">
+    <a>Crear tu guifo es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados. Los pasos para
+      crear tu guifo son:
+      1) Dar permisos de acceso a la cámara (sólo por el tiempo de uso)
+      2) Capturar tu momento guifo
+      3) Revisar el momento
+      4) Listo para subir y compartir!
+      ¿Quieres comenzar a crear tu guifo ahora?</a>
+    </div>
+    <button id="btnCancelar">Cancelar</button>
+    <button id="btnComenzar">Comenzar</button>
+
+    <img id="imagen" src="./" alt="Aqui va el gif">
+    <video id="video" src=""></video>
+  </div>
+</section>
+
+<section>
+  <div id="captura">
+    <a>Un Chequeo Antes de Empezar</a>
+    <button id="btnGrabar">Capturar</button>
+  </div>
+  <div id="listo">
+    <a>Capturando Tu Guifo</a>
+    <button id="btnListo">Listo</button>
+  </div>
+</section>
+
+<section>
+  <div>
+    <a>Vista Previa</a>
+    <button id="btnRepetir">Repetir Captura</button>
+    <button id="btnSubir">Subir Guifo</button>
+  </div>
+  <div>
+    <a>Subiendo Guifo</a>
+    <a>Estamos subiendo tu guifo…</a>
+    <a>Tiempo restante: 38 años algunos minutos</a>
+    <button id="btnCancelar">Cancelar</button>
+  </div>
+</section>
+
+<section>
+  <div>
+    <a>Guifo Subido Con Éxito</a>
+    <a>Guifo creado con éxito</a>
+    <button id="btnCopiarEnlace">Copiar Enlace Guifo</button>
+    <button id="btnDescargar">Descargar Guifo</button>
+    <button id="btnListo">Listo</button>
+  </div>
+</section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.6/RecordRTC.js"></script>
+  <script src="js/crearGif.js"></script>
+</body>
+
+</html>

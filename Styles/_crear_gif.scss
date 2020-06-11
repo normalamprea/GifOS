@@ -1,0 +1,11 @@
+body{
+  background: $claro;
+  transition: .3s ease all; 
+  margin-left: 100px;
+  margin-right: 100px;
+    &.dark{
+      background: $oscuro 100%;
+  }
+  }
+
+  

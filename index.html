@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Proyecto GuifOS</title>
+    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+    <div id="encabezado">
+      <h1>
+        ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número
+        de visitas: 12.765.803
+      </h1>
+    </div>
+      <div class="menu">
+         <img id="imgLogo" class="logo-container" src="./images/gifOF_logo.png" alt="Logo de gifOF" />
+        <nav class="pantallas">
+          <a href="./crear_gif.html">Crear Guifos</a>
+          <div class="desplegable box" id="tema">
+            <button class="btnElegir">
+              <span class="tema">Elegir Tema</span>
+              <span class="icono"><img id="triangulo" src="./Images/dropdown.svg" alt="Flecha"></span>
+            </button> 
+            <div class="opciones" id="myDropdown">
+              <button id="themeDay" class="boton theme day"> <u>S</u>ailor Day</button>
+              <button id="themeNight" class="boton theme night">Sailor Night</button>
+          </div>
+          </div>
+            <a id="text" href="misGuifos.html"><u>M</u>is Guifos</a>
+          </nav>
+        </div>
+        <div id="contBuscar">
+          <div class="search-container">
+            <div id="buscar">
+            <p>Buscar</p>
+          </div>
+          <form id="search-form">
+            <input id="search-input" type="text" autocomplete="off" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
+            <button type="submit" class="btnBuscar" onclick="window">Buscar</button>
+            <button id="input-submit" class="submit" type="submit" onclick="window.location.href='#seccion_tendencias'"><img id="lupa" src="./Images/lupa_inactive.svg" alt=""> Buscar</button>
+          </form>
+          <div id="sugerencia" class="sugerencia">
+            <button value="puppies" class="suge" id="suggestion1">Puppies</button>
+            <button value="unicorns" class="suge" id="suggestion2">Unicorns</button>
+            <button value="kittens" class="suge" id="suggestion3">Kittens</button>
+          </div>
+        </div>
+        <div id="results" class="results">
+          <ul id="resultados-busqueda" class="flex-container wrap">
+            <!-- Aqui se mostraran los gifs de resultados de busqueda-->
+          </ul>
+        </div>
+      </div>
+    </header>
+    
+ <section class="seccion_sugerencias">
+  <div id="sugerencias">
+    <h2>Hoy te sugerimos:</h2>
+  </div>
+    <div id="contenedor-sugerencias" class="flex-container wrap">
+          <!-- Aqui se mostraran los gifs de sugerencias-->
+       </div>      
+</section>
+<section>
+  <div id="tendencia">
+    <h2 id="titulo-tendencia">Tendencias:</h2> 
+  </div>
+        <div id="resultados-tendencias" class="flex-container wrap">
+          <!-- Aqui se mostraran los gifs de tendencias-->
+  </div>
+</section>
+    
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/traerGif.js"></script>
+
+  </body>
+</html>
