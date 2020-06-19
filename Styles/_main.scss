@@ -18,7 +18,7 @@ margin-left: 100px;
 margin-right: 100px;
   &.dark{
     background: $color-shadow-azul 100%;
-}
+    }
 }
 
 #encabezado{
@@ -34,6 +34,9 @@ margin-right: 100px;
   padding-top: 4px;
   padding-left: 8px;
   opacity: 100%;
+  &.dark{
+    background: $color-shadow-azul 100%;
+  }
 }
 
 .flex-container {

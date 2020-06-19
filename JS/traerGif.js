@@ -24,10 +24,12 @@ sugeridos.forEach(element => {
     resultados1HTML = `<div class="sugerencias">
     <div class="titulo-sugerencias">
       <h3 class="title">#${titleAjustado.trim()}</h3>
-      <button name="eliminar"><img src="./Images/button3.svg" alt="Quitar sugerencia"></button>
+      <button class="btn-eliminar" name="eliminar"><img src="./Images/button3.svg" alt="Quitar sugerencia"></button>
     </div>
+    <div class= "verMas-Sugerencias">
     <li class="flex-item">
-        <img class="imagen-sugeridos" src="${urlImagen}" alt="${title}"><button name='buscar-mas' value='${titleAjustado.trim()}' class="btnVerMas">Ver Mas...</button></li>`;
+        <img class="imagen-sugeridos" src="${urlImagen}" alt="${title}"><button name='buscar-mas' value='${titleAjustado.trim()}' class="btnVerMas">Ver Mas...</button></li>
+    </div>`
       
     document.getElementById("contenedor-sugerencias").innerHTML += resultados1HTML;
   }).catch(error => {
@@ -163,10 +165,10 @@ panelSugerencia.addEventListener('click', (e) => {
 
 const contenedorSugerencias = document.getElementById('contenedor-sugerencias');
 contenedorSugerencias.addEventListener('click', (e) => {
-
+  console.log(e.target.alt);
   if (e.target.name === "buscar-mas") {
     mostrarSugerencias(e);
-  } else if (e.target.alt === "Eliminar sugerencia") {
+  } else if (e.target.alt === "Quitar sugerencia") {      
     const hijo = e.target;
     const padre = hijo.parentNode.parentNode;
     padre.parentNode.remove(padre);

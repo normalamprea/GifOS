@@ -1,4 +1,5 @@
 // //Crear Guifos
+const div_instruccines = document.getElementById('crearGif');
 
 const imagen = document.getElementById('imagen');
 const video = document.getElementById('video');
@@ -14,11 +15,9 @@ const apikey = 'aantJ1Lvuxc538iYiNLcdeBhZY6hLAjs';
 var urlGiphy;
 
 btnComenzar.addEventListener('click', () => {
-    video.style.display="block";
-    
     navigator.mediaDevices.getUserMedia({
         video: true
-    }).then(function(stream) {
+    }).then(function (stream) {
         video.srcObject = stream;
         video.play();
         recorder = RecordRTC(stream, {
@@ -26,7 +25,9 @@ btnComenzar.addEventListener('click', () => {
             framRate: 1,
             quality: 10,
             hidden: 240,
-        });        
+        });
+        video.style.display = "block";
+        div_instruccines.display = "none";
     })
 });
 
@@ -35,9 +36,9 @@ btnGrabar.addEventListener('click', () => {
 })
 
 btnListo.addEventListener('click', () => {
-    recorder.stopRecording(function() {
-        video.style.display="none";
-        imagen.style.display="block";
+    recorder.stopRecording(function () {
+        video.style.display = "none";
+        imagen.style.display = "block";
         blob = recorder.getBlob();
         imagen.src = URL.createObjectURL(blob);
         //voy a guardar el blob donde se lee el gif en el local storage        
@@ -46,37 +47,37 @@ btnListo.addEventListener('click', () => {
 });
 
 //capturo el evento click del boton subir
-btnSubir.addEventListener('click', (e) =>{    
+btnSubir.addEventListener('click', (e) => {
     let form = new FormData();
-    form.append('file', blob, 'MyGif.gif')    
+    form.append('file', blob, 'MyGif.gif')
     const url = `http://upload.giphy.com/v1/gifs`
     form.append('api_key', apikey)
 
-    fetch(url,{
-        method:'POST',
+    fetch(url, {
+        method: 'POST',
         body: form,
     })
-    .then(res=>res.json())
-    .then(datar=>{
-        let idgif = datar.data.id;
-        let urlgif = `http://api.giphy.com/v1/gifs/${idgif}?api_key=${apikey}`
-        fetch(urlgif)
         .then(res => res.json())
-        .then(json =>{
-            urlGiphy = json.data.url;
-            //let urlImage = json.data.images.fixed_width.url;
-            
-            //newGif.setAttribute('src', urlImage);            
-            //añadirGif(urlImage);
+        .then(datar => {
+            let idgif = datar.data.id;
+            let urlgif = `http://api.giphy.com/v1/gifs/${idgif}?api_key=${apikey}`
+            fetch(urlgif)
+                .then(res => res.json())
+                .then(json => {
+                    urlGiphy = json.data.url;
+                    //let urlImage = json.data.images.fixed_width.url;
+
+                    //newGif.setAttribute('src', urlImage);            
+                    //añadirGif(urlImage);
+                })
         })
-    })
 });
 
-btnDescargar.addEventListener('click', ()=>{
+btnDescargar.addEventListener('click', () => {
     recorder.save();
 });
 
-btnCopiarEnlace.addEventListener('click', ()=>{
+btnCopiarEnlace.addEventListener('click', () => {
     let aux = document.createElement("input");
     aux.setAttribute('value', urlGiphy);
     document.body.appendChild(aux);
